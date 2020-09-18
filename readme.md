@@ -90,4 +90,68 @@ Day 1: Exercise 1
     - This component will accept the 'dataSource' property that will accept an array based on which Rows and columns must be geneated (Mandatory Today)
     - This component should have porperty 'canDelete', 'canSelectRow' which will accpts boolean value. If the value for canDelete is true, each row of the table should generate 'Delete' button to delete row from collection of parent component. If casSelectRow is true then the selected row value should be displayed in TextBoxes of parent component. (Mandatory Today)
 
-    - This component should have properties of name 'IsSortable' and 'sortKey', if IsSortable is true then the table should show data in sorted order for the property name of 'sortKey'. E.g. is IsSortable=true and soryKey="ProductName", the table should show data sorted by Product Name   (Optional)          
+    - This component should have properties of name 'IsSortable' and 'sortKey', if IsSortable is true then the table should show data in sorted order for the property name of 'sortKey'. E.g. is IsSortable=true and soryKey="ProductName", the table should show data sorted by Product Name   (Optional) 
+
+=============================================================================================================================
+WebComponent, W3C
+RICH --> UX ----> UI + Data + Behavior (Events + Methods)
+OCX (COM), Applets (Cross Platform)   
+Mozilla --> WebComponents, autonomous object model with UI, data and behavior, project polymer  
+Angular, React, Vue, Ember --> Common Concept called as COMPONENTS       
+COMPONENTS will be used or provides 'UI Composition for front-end'
+1. Reusability of UI with behavior
+2. Modern Front-End Architecture
+    - Micro-Front Ends
+    - FLUX Architecture
+3. Maintainability
+4. JavaScript Agonostic Front-End App. development (Browser + Mobile)
+=============================================================================================================================
+UX for Line-of-Business Apps
+1. Server-Side communication (HTTP or Sockets)
+    - ES 6 HTTP Object Model
+        - fetch
+        - axios
+        - generators when using Redux
+2. Easy and managable data fetching using GraphQL
+    - Server-side middlewares for accessing data
+3. Front-End Data Validations aka Form-Validations
+    - Form in react
+        - UI that contains 'fields' aka Form editable Elements
+        - Logic of Form
+            - Business Logic for Form
+                - Accessing External APIs, REST or gRPC
+                    - Async
+                    - Promise Objects (?)
+                        - Like a Task Object on Server-Side, unit of Asynchronous operaion
+            - Logic for Validations
+                - HTML 5 Elements validation
+                - Implement CUstom Rules for Validations
+4. Good Coding Practices
+    - React.js Lifecycle Hooks
+        - provides a mechanism for
+            - Managing Parche/Child Component Execution
+            - Handling memory leaks
+            - HTTP Async Call management that results in updating React UI State
+
+5. External Calls
+6. Hooks of Reacts 16.8+
+    - Functional Components or also implemented using fucntion expressions
+    - Uses 'props' to receive data from its parent
+    - useState(), to define state
+    - useContext(), to share data across components
+    - useEffects(), to perform operations of componentDidMount() and componentWillUnmount() 
+    - class component has 'this' as default scope to load and execute methods of current class using 'bind(this)' within the scope of class itself
+
+7. Exception Handling in Render method
+8. Component Factories aks Higher-Order-Components
+9. React Single Page Application using Routing
+10. State Management with React Apps
+11. Managing external calls using optimized Traffic management on server-side usig GraphQL 
+
+
+
+Day 2: 
+Exercise 1: Create a component that will act as validation summary for the form validation. This component should be generic in such a way that, it will be able to show validations as follows
+    - PropertyName : Validation Error Message
+
+Exercise 2: Create a Table Hook Component as a modification of the TableCOmponents in Day 1 Exercise. Pass te data of products using Context.
