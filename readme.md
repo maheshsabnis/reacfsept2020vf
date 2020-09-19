@@ -134,6 +134,18 @@ UX for Line-of-Business Apps
             - HTTP Async Call management that results in updating React UI State
 
 5. External Calls
+    - Using axios
+        - npm install --save axios
+            - Async methods
+                - get()/post()/put()/delete()
+                - returns the Promise object
+            - the client app must subscribe to the promise object.
+            - The React Class Comonent must subscribe to all external calls in 'componentDidMount()' method
+                - This will unblock the class comoponent from delayed execution of external dependnecies
+                - Since render() is already executed, any state/propes changed by    componentDidMount() will update the component  
+            - If using the React Hooks aka functional component then subscribe to external calls using
+                - The 'useEffect()' hook
+                    - The combination of componentDidMount() and componentWllUnmount()    
 6. Hooks of Reacts 16.8+
     - Functional Components or also implemented using fucntion expressions
     - Uses 'props' to receive data from its parent
@@ -146,6 +158,18 @@ UX for Line-of-Business Apps
 8. Component Factories aks Higher-Order-Components
 9. React Single Page Application using Routing
 10. State Management with React Apps
+    - redux package
+        - Used to provide the Redux object model
+            - combineReducers
+                - a contaier to agreegate  multiple redcucers into single reducer 
+            - createStore
+                - create a STORE for the application using reducer
+            - applymiddleware
+                - used to manage all async calls from Actions
+    - react-redux
+        - Used to connect the react object model ton redux object model
+            - connect()
+                - used to connect the state from store to state/props of the React Component
 11. Managing external calls using optimized Traffic management on server-side usig GraphQL 
 
 
@@ -154,4 +178,8 @@ Day 2:
 Exercise 1: Create a component that will act as validation summary for the form validation. This component should be generic in such a way that, it will be able to show validations as follows
     - PropertyName : Validation Error Message
 
-Exercise 2: Create a Table Hook Component as a modification of the TableCOmponents in Day 1 Exercise. Pass te data of products using Context.
+Exercise 2: Create a Table Hook Component as a modification of the TableCOmponents in Day 1 Exercise. Pass te data of products using Context.]
+
+
+Day 3: 
+Modify the Redux app that will dispatch an action to read the selected product from the table and display it in the AddProductComponent so that it can be updated and updated data will be shown back into the ListPrductsComponent 
