@@ -170,8 +170,52 @@ UX for Line-of-Business Apps
         - Used to connect the react object model ton redux object model
             - connect()
                 - used to connect the state from store to state/props of the React Component
-11. Managing external calls using optimized Traffic management on server-side usig GraphQL 
+    - Generators
+        - function *fnGenerator(){....}
+            - yield the result
 
+11. Managing external calls using optimized Traffic management on server-side usig GraphQL 
+    -  Department
+        - DeptNo, DeptName, Location
+    - Employee
+        - EmpNo, EmpName, DeptNo
+    - http://myserver/services/api/department, will return all depts
+    - http://myserver/services/api/employees, will return all emsp
+    - employees/deptname
+        - emp
+            dept
+                location
+    - GrapgQL
+        - Mechanism of arranging the fast queries to fetch the related data than REST APIs.
+            - Apollo Server
+                - Publish an Endpoint to perform data operations 
+            - Apollo Client
+                - USed by the client app to make calls to Endpoints
+        - Core Concepts
+            - Define Scehma
+                - schema using which data will be read/written
+            - define queries
+                - query strctures
+            - mutations
+                - methods to read/write data based on queries    
+        - appollo-server-express
+            - USed to define the GraphQL Server with Schemas, Queries and Mutation
+            -USed Express server on Node.js to process HTTP Requests for GraphQL to Read/Write data
+        - @apollo/react-hooks
+            - the react hooks for Apollo client to manager queries from react app
+        - graphql-tag
+            - to build queries                                          
+12. Unit Testing of the react application
+    - enzyme 
+        - a JSOM for testing the react application
+    - enzyme-adapter-react-16
+        - a bridge between enzyme JSOM and React to unit the virtual DOM
+    - shallow , single component test
+    - mount, testing entire DOM tree    
+        - npm install --save-dev enzyme enzyme-adapter-react-16
+    - using JEST
+        - npm install -g jest
+    - create enzyme.js file for Enzyme COnfiguration    
 
 
 Day 2: 
@@ -183,3 +227,13 @@ Exercise 2: Create a Table Hook Component as a modification of the TableCOmponen
 
 Day 3: 
 Modify the Redux app that will dispatch an action to read the selected product from the table and display it in the AddProductComponent so that it can be updated and updated data will be shown back into the ListPrductsComponent 
+
+
+export default xyz; ----> generate a defualt instance of module and it can be used by the importer
+
+import xyz from 'file';
+
+export xyz; --> generate a module but that must be imported as type to use by its instance
+
+import {xyz}from 'file'; 
+let c = new xyz();
